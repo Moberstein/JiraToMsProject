@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using JiraToMsProject.Properties;
 using Microsoft.Office.Tools.Ribbon;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace JiraToMsProject
 {
@@ -26,6 +27,18 @@ namespace JiraToMsProject
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 var filename = openFileDialog.FileName;
+
+                var app = new Excel.Application();
+                var workbook = app.Workbooks.Open(filename);
+                var worksheet = (Excel.Worksheet)workbook.Worksheets.Item[1];
+
+                var jira = worksheet.Range["A2"].Value2;
+                if (!jira.Trim().ToLower().Equals("jira"))
+                {
+                    MessageBox.Show(Resources.NO_JIRA_IMPORT_FILE_FOUND);
+                }
+
+                app.Quit();
             }
         }
     }

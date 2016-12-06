@@ -71,6 +71,15 @@ namespace JiraToMsProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No Jira Header found in the active worksheet.
+        /// </summary>
+        internal static string NO_JIRA_IMPORT_FILE_FOUND {
+            get {
+                return ResourceManager.GetString("NO_JIRA_IMPORT_FILE_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Microsoft Excel 97-2003 Worksheet (*.xls) | *.xls | All files(*.*) | *.*.
         /// </summary>
         internal static string OPEN_FILE_FILTER {

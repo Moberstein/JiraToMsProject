@@ -124,4 +124,7 @@
   <data name="OPEN_FILE_FILTER" xml:space="preserve">
     <value>Microsoft Excel 97-2003 Worksheet (*.xls) | *.xls | All files(*.*) | *.*</value>
   </data>
+  <data name="NO_JIRA_IMPORT_FILE_FOUND" xml:space="preserve">
+    <value>No Jira Header found in the active worksheet</value>
+  </data>
 </root>
