@@ -69,5 +69,14 @@ namespace JiraToMsProject.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Microsoft Excel 97-2003 Worksheet (*.xls) | *.xls | All files(*.*) | *.*.
+        /// </summary>
+        internal static string OPEN_FILE_FILTER {
+            get {
+                return ResourceManager.GetString("OPEN_FILE_FILTER", resourceCulture);
+            }
+        }
     }
 }
