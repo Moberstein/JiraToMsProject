@@ -1,4 +1,6 @@
-﻿namespace JiraToMsProject
+﻿using Microsoft.Office.Tools.Ribbon;
+
+namespace JiraToMsProject
 {
     partial class JiraRibbon : Microsoft.Office.Tools.Ribbon.RibbonBase
     {
@@ -62,6 +64,7 @@
             this.button_import_jira.Label = "Import Jira XSL";
             this.button_import_jira.Name = "button_import_jira";
             this.button_import_jira.ShowImage = true;
+            this.button_import_jira.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button_import_jira_Click);
             // 
             // JiraRibbon
             // 
